@@ -2,9 +2,30 @@ const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 
-let tasks = []
-
+// let todoArr = []
+ 
 const url = "http://localhost:3000/todos"
+
+// async function get_Todos() {
+//     try {
+//         const resp = await fetch(URL);
+//         const data = await resp.json();
+//         return data;
+//     }   catch(err) {
+//         return err;
+//     }
+// }
+
+// function display_Todos(todoArr){
+//     todoArr.forEach((todoElem) =>{ 
+//     console.log(todoElem);
+
+//     let todo = document.createElement("div")
+//     todo.classList.add("todo");
+//     })
+// }
+
+
 
 todoForm.addEventListener('submit', function(event) {
   event.preventDefault();
@@ -74,7 +95,7 @@ function addTask(task) {
 }
 
 function saveTasksToLocalStorage() {
-   // const tasks = [];
+    const tasks = [];
   document.querySelectorAll('#todo-list li').forEach(task => {
       const taskText = task.querySelector('span').textContent;
       const isCompleted = task.classList.contains('completed');
@@ -89,3 +110,16 @@ document.addEventListener('DOMContentLoaded', function() {
       addTask(task.text);
   });
 });
+
+
+
+
+// get_Todos()
+// .then((todoArr) => {
+//     todoArray = todoArr;
+//     console.log(todoArray);
+//     display_Todos(todoArray)
+// })
+// .catch((err) => console.log(err));
+
+
