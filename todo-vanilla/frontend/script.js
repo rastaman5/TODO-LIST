@@ -91,25 +91,24 @@ function addTask(task) {
       }
   });
 
-  saveTasksToLocalStorage();
+  //saveTasksToLocalStorage();
 }
 
-function saveTasksToLocalStorage() {
-    const tasks = [];
-  document.querySelectorAll('#todo-list li').forEach(task => {
-      const taskText = task.querySelector('span').textContent;
-      const isCompleted = task.classList.contains('completed');
-      tasks.push({ text: taskText, completed: isCompleted });
-  });
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-}
-
+// function saveTasksToLocalStorage() {
+//     const tasks = [];
+//   document.querySelectorAll('#todo-list li').forEach(task => {
+//       const taskText = task.querySelector('span').textContent;
+//       const isCompleted = task.classList.contains('completed');
+//       tasks.push({ text: taskText, completed: isCompleted });
+//   });
+//   localStorage.setItem('tasks', JSON.stringify(tasks));
+// }
 document.addEventListener('DOMContentLoaded', function() {
   const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
-  savedTasks.forEach(task => {
-      addTask(task.text);
+//   savedTasks.forEach(task => {
+//       addTask(task.text);
   });
-});
+//});
 
 
 

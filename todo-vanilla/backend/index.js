@@ -1,4 +1,4 @@
-9
+
 const express = require("express");
 const uuid = require("uuid");
 const app = express();
@@ -13,19 +13,19 @@ app.use(cors());
 const todos =[
     {
         id: 1,
-        name: "Catch Jirachi",
+        name: "Washing",
         completed: true
     },
 
     {
         id: 2,
-        name: "Catch Celebi",
+        name: "Reading",
         completed: false
     },
 
     {
         id: 3,
-        name: "Catch Charizard",
+        name: "Shopping",
         completed: true
     }
 ]

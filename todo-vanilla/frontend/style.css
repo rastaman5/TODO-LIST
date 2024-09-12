@@ -44,6 +44,7 @@ body {
   }
   
   #todo-list {
+    
     list-style: none;
     padding: 0;
   }
@@ -58,8 +59,19 @@ body {
     align-items: center;
   }
   button{
-   
-    background-color: green;
+    border-radius: 5px;
+   font-size:larger;
+    background-color: rgb(113, 145, 165);
     border:none;
+    padding: 10px 20px;
+    color: whitesmoke;
+    transition: background-color 0.8s;
+    cursor: pointer; 
+  }
+
+  button:hover{
+    border-radius: 10px;
+    background-color:  rgb(132, 178, 207);
+    
   }
   
