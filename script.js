@@ -2,28 +2,28 @@ const todoForm = document.getElementById('todo-form');
 const todoInput = document.getElementById('todo-input');
 const todoList = document.getElementById('todo-list');
 
-// let todoArr = []
+
  
-const url = "http://localhost:3000/todos"
 
-// async function get_Todos() {
-//     try {
-//         const resp = await fetch(URL);
-//         const data = await resp.json();
-//         return data;
-//     }   catch(err) {
-//         return err;
-//     }
-// }
+// fetch("http://localhost:3000/getusers")
+// .then(function(res)  {
+//   return res.json()
+// })
+// .then(function(data) {
+//   console.log((data));
+  
+// })
 
-// function display_Todos(todoArr){
-//     todoArr.forEach((todoElem) =>{ 
-//     console.log(todoElem);
 
-//     let todo = document.createElement("div")
-//     todo.classList.add("todo");
-//     })
-// }
+fetch("http://localhost:3000/getusers")
+.then((res) =>  res.json())
+.then((data) => console.log(data));
+
+// fetch("http://localhost:3000/getusers", {
+//   method: "POST",
+//   body: 
+// })
+
 
 
 
